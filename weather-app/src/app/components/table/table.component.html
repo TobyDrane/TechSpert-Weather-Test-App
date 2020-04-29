@@ -1,3 +1,21 @@
-<div>
-  <p>table</p>
+<div class="weather">
+  <h1>Weather Table</h1>
+  <table>
+    <tr>
+      <th>City</th>
+      <th>Hi</th>
+      <th>Low</th>
+      <th>Temp</th>
+      <th>Description</th>
+    </tr>
+    <ng-container *ngFor="let city of data | async">
+      <tr>
+        <td>{{ city.name }}</td>
+        <td>{{ city.main.temp_min }}</td>
+        <td>{{ city.main.temp_max }}</td>
+        <td>{{ city.main.temp }}</td>
+        <td *ngFor="let weather of city.weather">{{ weather.description }}</td>
+      </tr>
+    </ng-container>
+  </table>
 </div>
