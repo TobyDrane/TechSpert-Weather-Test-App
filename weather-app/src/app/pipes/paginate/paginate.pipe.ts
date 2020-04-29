@@ -9,7 +9,7 @@ export class PaginatePipe implements PipeTransform {
     if (!value) {
       return value;
     }
-    const start = 0;
+    const start = currentPage === 1 ? 0 : rows * (currentPage - 1);
     const end = rows * currentPage;
     return value.slice(start, end);
   }

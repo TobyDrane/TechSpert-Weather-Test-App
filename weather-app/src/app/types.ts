@@ -38,3 +38,8 @@ export type Pagnation = {
   rows: number,
   currentPage: number,
 };
+
+export type Filter = {
+  order: 'asc' | 'desc',
+  column: 'city' | 'temp',
+};

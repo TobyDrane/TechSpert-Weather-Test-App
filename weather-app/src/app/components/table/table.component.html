@@ -1,9 +1,14 @@
 <div class="weather">
   <h1>Weather Table</h1>
-  <app-paginate
-    [pagnation]="pagnation"
-    [dataLength]="dataLength"  
-  ></app-paginate>
+  <div class="toolbar">
+      <app-paginate
+      [pagnation]="pagnation"
+      [dataLength]="dataLength"  
+    ></app-paginate>
+    <app-filter
+      [filter]="filter"
+    ></app-filter>
+  </div>
   <table>
     <tr>
       <th>City</th>
@@ -12,7 +17,7 @@
       <th>Temp</th>
       <th>Description</th>
     </tr>
-    <ng-container *ngFor="let city of data | async | paginate:pagnation.rows:pagnation.currentPage">
+    <ng-container *ngFor="let city of data | async | paginate:pagnation.rows:pagnation.currentPage | filter:filter.order:filter.column">
       <tr>
         <td>{{ city.name }}</td>
         <td>{{ city.main.temp_min }}</td>

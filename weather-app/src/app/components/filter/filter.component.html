@@ -1,0 +1,16 @@
+<div class="filter">
+  <div class="order">
+    <label for="order">Order by:</label>
+    <select id="order" (change)="changeOrder($event.target.value)">
+      <option value="asc">Ascending</option>
+      <option value="desc">Descending</option>
+    </select>
+  </div>
+  <div class="column">
+    <label for="column">Column:</label>
+    <select id="column" (change)="changeFilter($event.target.value)">
+      <option value="city" [selected]="filter.column === 'city'">City</option>
+      <option value="temp" [selected]="filter.column === 'temp'">Temp</option>
+    </select>
+  </div>
+</div>

@@ -2,6 +2,11 @@
   width: 80%;
   margin: 0 auto;
 
+  .toolbar {
+    display: flex;
+    flex-direction: row;
+  }
+
   > h1 {
     font-size: 20px;
     font-weight: 700;
