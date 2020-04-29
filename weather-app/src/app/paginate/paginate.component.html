@@ -1,0 +1,21 @@
+<div class="paginate">
+  <div class="rows">
+    <p>Rows</p>
+    <button
+      *ngFor="let type of [5, 10, 20]"
+      [ngClass]="{selected: type === pagnation.rows}"
+      (click)="setRows(type)"
+    >{{ type }}</button>
+  </div>
+  <div class="pagesButton">
+    <p>Current Page: {{ pagnation.currentPage }}</p>
+    <button
+      [disabled]="pagnation.currentPage === 1"
+      (click)="changePage(-1)"
+    >Prev Page</button>
+    <button
+      [disabled]="dataLength < (pagnation.currentPage * pagnation.rows)"
+      (click)="changePage(1)"
+    >Next Page</button>
+  </div>
+</div>

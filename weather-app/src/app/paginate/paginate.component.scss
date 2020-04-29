@@ -1,0 +1,36 @@
+.paginate {
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  .rows {
+    margin-right: 70px;
+    button {
+      background-color: #FFF;
+      border: 1px solid black;
+      border-radius: 0.5rem;
+      color: black;
+      margin-right: 5px;
+      font-size: 15px;
+      padding: 7px;
+    }
+    button.selected {
+      background-color: #6c7ae0;
+      color: #FFF;
+    }
+  }
+  .pagesButton {
+    button {
+      background-color: #FFF;
+      border: 1px solid black;
+      border-radius: 0.5rem;
+      color: black;
+      margin-right: 5px;
+      font-size: 15px;
+      padding: 7px;
+    }
+    button:disabled {
+      background-color: lightgray;
+      cursor: not-allowed;
+    }
+  }
+}

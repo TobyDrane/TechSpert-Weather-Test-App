@@ -33,3 +33,8 @@ export type SingleWeatherData = {
 export type WeatherResponse = {
   list: SingleWeatherData[],
 };
+
+export type Pagnation = {
+  rows: number,
+  currentPage: number,
+};
