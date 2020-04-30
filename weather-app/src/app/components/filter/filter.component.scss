@@ -1,5 +1,6 @@
 .filter {
   padding-bottom: 15px;
+  padding-top: 15px;
   display: flex;
   flex-direction: column;
   font-size: 15px;
@@ -11,6 +12,7 @@
 
     > label {
       padding-right: 5px;
+      font-size: 15px;
     }
     > select {
       background-color: #FFF;

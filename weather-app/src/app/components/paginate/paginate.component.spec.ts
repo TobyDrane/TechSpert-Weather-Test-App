@@ -16,6 +16,10 @@ describe('PaginateComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(PaginateComponent);
     component = fixture.componentInstance;
+    component.pagnation = {
+      currentPage: 1,
+      rows: 5,
+    };
     fixture.detectChanges();
   });
 

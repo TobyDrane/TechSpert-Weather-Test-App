@@ -30,7 +30,7 @@ export class GraphComponent implements OnInit {
   public barChartLabels = [];
   public chartData = [
     { data: [], label: 'Temperature' },
-    { data: [], label: 'Mean Temperature' },
+    { data: [], label: 'Overall Mean Temperature' },
   ];
 
   public ngOnInit(): void {

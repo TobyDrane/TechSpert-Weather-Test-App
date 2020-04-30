@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { SingleWeatherData, Pagnation, Filter } from 'src/app/types';
+import { SingleWeatherData, Pagnation, Filter, Search } from 'src/app/types';
 
 @Component({
   selector: 'app-table',
@@ -21,6 +21,10 @@ export class TableComponent implements OnInit {
   public filter: Filter = {
     order: 'asc',
     column: 'city',
+  };
+
+  public search: Search = {
+    query: '',
   };
 
   public ngOnInit(): void {

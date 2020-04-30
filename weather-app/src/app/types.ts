@@ -43,3 +43,7 @@ export type Filter = {
   order: 'asc' | 'desc',
   column: 'city' | 'temp',
 };
+
+export type Search = {
+  query: string,
+};

@@ -8,6 +8,9 @@
     <app-filter
       [filter]="filter"
     ></app-filter>
+    <app-search
+      [search]="search"
+    ></app-search>
   </div>
   <table>
     <tr>
@@ -17,7 +20,7 @@
       <th>Temp</th>
       <th>Description</th>
     </tr>
-    <ng-container *ngFor="let city of data | async | paginate:pagnation.rows:pagnation.currentPage | filter:filter.order:filter.column">
+    <ng-container *ngFor="let city of data | async | paginate:pagnation.rows:pagnation.currentPage | filter:filter.order:filter.column | search:search.query">
       <tr>
         <td>{{ city.name }}</td>
         <td>{{ city.main.temp_min }}</td>
